@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Detection Result</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.card{
+background:#1c1c1c;
+padding:40px;
+border-radius:12px;
+width:450px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.url{
+margin:15px 0;
+word-wrap:break-word;
+}
+
+.meter{
+height:25px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+margin-top:15px;
+}
+
+.meter span{
+display:block;
+height:100%;
+background:linear-gradient(90deg,green,red);
+}
+
+button{
+margin-top:25px;
+padding:12px 25px;
+background:#00c6ff;
+border:none;
+border-radius:6px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0072ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Analysis Result</h2>
+
+<div class="url">
+<strong>URL:</strong><br>
+{{ url }}
+</div>
+
+<h3>{{ result }}</h3>
+
+<p>Phishing Risk Score: {{ risk }}%</p>
+
+<div class="meter">
+<span style="width: {{ risk }}%"></span>
+</div>
+
+<a href="/">
+
+<button>Check Another URL</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

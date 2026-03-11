@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Phishing Detector</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.card{
+background:#1c1c1c;
+padding:40px;
+border-radius:12px;
+width:420px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+margin-top:15px;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+background:#00c6ff;
+border:none;
+border-radius:6px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0072ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🔐 AI Phishing Detector</h1>
+
+<p>Enter a URL to check if it is safe</p>
+
+<form action="/predict" method="post">
+
+<input type="text" name="url" placeholder="https://example.com" required>
+
+<button type="submit">Analyze URL</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
